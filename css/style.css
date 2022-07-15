@@ -3,6 +3,11 @@ body {
     background-image: linear-gradient(to bottom, #009688 15%, #dcdbd3 15%, #dcdbd3 100%);
 }
 
+
+#type-bar {
+    background-color: #f3eeea;
+}
+
 .app-window {
     height: 90vh;
 }
@@ -13,4 +18,28 @@ body {
 
 #sidebar {
     background-color: white;
+}
+
+
+.chat-bg-image {
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
+}
+
+/* UTILS */
+.h-10 {
+    height: 10%;
+}
+
+.bg-light {
+    background-color: #eaeaea;
+}
+
+.bg-blue {
+    background-color: #8edafc;
+}
+
+.bg-lightgrey {
+    background-color: #f9f9f9;
+
 }
