@@ -1,0 +1,16 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #009688 15%, #dcdbd3 15%, #dcdbd3 100%);
+}
+
+.app-window {
+    height: 90vh;
+}
+
+#chat {
+    background-color: black;
+}
+
+#sidebar {
+    background-color: white;
+}
