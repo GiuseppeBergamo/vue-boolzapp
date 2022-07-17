@@ -3,6 +3,10 @@ body {
     background-image: linear-gradient(to bottom, #009688 15%, #dcdbd3 15%, #dcdbd3 100%);
 }
 
+#user,
+#chat-user {
+    height: 70px;
+}
 
 #type-bar {
     background-color: #f3eeea;

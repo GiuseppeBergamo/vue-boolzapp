@@ -28,7 +28,7 @@
                 <div class="row h-100">
                     <!--CONTACTS SIDEBAR-->
                     <section id="sidebar" class="col-4 p-0 d-flex flex-column">
-                        <section id="user" class="bg-light h-10 d-flex justify-content-between">
+                        <section id="user" class="bg-light d-flex justify-content-between">
                             <div class="w-75 flex-shrink-0 h-100 d-flex align-items-center">
                                 <img src="img/avatar_io.jpg" alt="" class="h-100 rounded-circle p-1">
                                 <div class="h6 mb-0">Giuseppe Bergamo</div>
@@ -61,9 +61,10 @@
                         </section>
                         <section id="contacts" class="flex-grow-1 overflow-auto">
                             <ul class="m-0 p-0">
-                                <li class="d-flex align-items-center">
-                                    <img src="img/avatar_1.jpg" alt="Filippo Cruz" class="h-100 rounded-circle p-1">
-                                    <div class="h6 mb-0">Filippo Cruz</div>
+                                <li v-for="contact in contacts" class="d-flex align-items-center">
+                                    <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name"
+                                        class="h-100 rounded-circle p-1">
+                                    <div class="h6 mb-0">{{ contact.name }}</div>
                                 </li>
                             </ul>
                         </section>
@@ -71,7 +72,7 @@
                     </section>
                     <!--CHAT SECTION-->
                     <section id="chat" class="col-8 d-flex h-100 flex-column p-0">
-                        <section id="chat-user" class="bg-light h-10 d-flex justify-content-between flex-shrink-0">
+                        <section id="chat-user" class="bg-light d-flex justify-content-between flex-shrink-0">
                             <div class="w-85 h-100 d-flex align-items-center">
                                 <img src="img/avatar_1.jpg" alt="Filippo Cruz" class="h-100 rounded-circle p-1">
                                 <div class="h-6 mb-0">Filippo Cruz</div>
