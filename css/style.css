@@ -16,14 +16,33 @@ body {
     background-color: black;
 }
 
+.chat-bg-image {
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
+}
+
 #sidebar {
     background-color: white;
 }
 
+#search-bar {
+    position: relative;
+}
 
-.chat-bg-image {
-    background-image: url(../img/mine.jpg);
-    background-size: contain;
+#search-bar input {
+    padding-left: 40px;
+}
+
+#search-bar .bi-search {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#contacts li {
+    height: 70px;
+    border-bottom: 2px solid lightgray;
 }
 
 /* UTILS */
@@ -42,4 +61,43 @@ body {
 .bg-lightgrey {
     background-color: #f9f9f9;
 
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-blue {
+    color: #8edafc;
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+/* MESSAGES */
+
+.message-sent {
+    justify-content: flex-end;
+}
+
+.message-received {
+    justify-content: flex-start;
+}
+
+.message-received .message-content {
+    background-color: #fff;
+}
+
+.message-sent .message-content {
+    background-color: #d5f9ba;
 }

@@ -28,33 +28,91 @@
                 <div class="row h-100">
                     <!--CONTACTS SIDEBAR-->
                     <section id="sidebar" class="col-4 p-0 d-flex flex-column">
-                        <section id="user" class="bg-light h-10">
-
+                        <section id="user" class="bg-light h-10 d-flex justify-content-between">
+                            <div class="w-75 flex-shrink-0 h-100 d-flex align-items-center">
+                                <img src="img/avatar_io.jpg" alt="" class="h-100 rounded-circle p-1">
+                                <div class="h6 mb-0">Giuseppe Bergamo</div>
+                            </div>
+                            <div id="user-icons"
+                                class="w-25 d-flex justify-content-between align-items-center text-secondary">
+                                <i class="bi bi-circle"></i>
+                                <i class="bi bi-chat-left-fill"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
                         </section>
 
-                        <section id="notifications" class="bg-blue h-10">
-
+                        <section id="notifications" class="bg-blue h-10 flex-shrink-0">
+                            <div class="d-flex align-items-center">
+                                <div class="h-100 p-2">
+                                    <div
+                                        class="icon-container bg-white rounded-circle text-blue d-flex justify-content-center align-items-center">
+                                        <i class="bi bi-bell-slash-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="w-75">
+                                    <div class="h6 mb-0">Ricevi notifiche di nuovi messaggi</div>
+                                    <a href="#">Attiva notifiche desktop</a>
+                                </div>
+                            </div>
                         </section>
-                        <section id="search-bar" class="bg-lightgrey p-1">
-
+                        <section id="search-bar" class="bg-lightgrey p-2 flex-shrink-0">
+                            <i class="bi bi-search text-secondary"></i>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100">
                         </section>
-                        <section id="contacts" class="flex-grow-1">
-
+                        <section id="contacts" class="flex-grow-1 overflow-auto">
+                            <ul class="m-0 p-0">
+                                <li class="d-flex align-items-center">
+                                    <img src="img/avatar_1.jpg" alt="Filippo Cruz" class="h-100 rounded-circle p-1">
+                                    <div class="h6 mb-0">Filippo Cruz</div>
+                                </li>
+                            </ul>
                         </section>
 
                     </section>
                     <!--CHAT SECTION-->
                     <section id="chat" class="col-8 d-flex h-100 flex-column p-0">
-                        <section id="chat-user" class="bg-light h-10">
-
+                        <section id="chat-user" class="bg-light h-10 d-flex justify-content-between flex-shrink-0">
+                            <div class="w-85 h-100 d-flex align-items-center">
+                                <img src="img/avatar_1.jpg" alt="Filippo Cruz" class="h-100 rounded-circle p-1">
+                                <div class="h-6 mb-0">Filippo Cruz</div>
+                            </div>
+                            <div class="w-15 d-flex justify-content-around align-items-center text-secondary">
+                                <i class="bi bi-search"></i>
+                                <i class="bi bi-paperclip"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
                         </section>
 
                         <section id="chat-content" class="chat-bg-image overflow-auto flex-grow-1">
-
+                            <ul class="p-3">
+                                <li class="d-flex message-sent p-2">
+                                    <div class="message-content p-2 rounded-2">
+                                        <p>Hai portato a spasso il cane?</p>
+                                    </div>
+                                </li>
+                                <li class="d-flex message-sent p-2">
+                                    <div class="message-content p-2 rounded-2">
+                                        <p>Ricordati di dargli da mangiare</p>
+                                    </div>
+                                </li>
+                                <li class="d-flex message-received p-2">
+                                    <div class="message-content p-2 rounded-2">
+                                        <p>Tutto fatto</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </section>
 
-                        <section id="type-bar" class="h-10">
-
+                        <section id="type-bar" class="h-10 flex-shrink-0 d-flex align-items-center p-2">
+                            <div>
+                                <i class="bi bi-emoji-smile text-secondary p-2" style="font-size: 2rem;"></i>
+                            </div>
+                            <div class="flex-grow-1 p-2 h-100">
+                                <input type="text" placeholder="Scrivi un messaggio" class="w-100 h-100">
+                            </div>
+                            <div>
+                                <i class="bi bi-mic-fill text-secondary p-2" style="font-size: 2rem;"></i>
+                            </div>
                         </section>
                     </section>
                 </div>
