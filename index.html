@@ -77,8 +77,8 @@
 
                         <section id="contacts" class="flex-grow-1 overflow-auto">
                             <ul class="m-0 p-0">
-                                <li v-for="(contact, index) in filteredContacts" class="d-flex align-items-center"
-                                    @click="goToContact(index)">
+                                <li v-if="contact.visible" v-for="(contact, index) in filteredContacts"
+                                    class="d-flex align-items-center" @click="goToContact(index)">
                                     <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name"
                                         class="h-100 rounded-circle p-1">
                                     <div class="h6 mb-0">{{ contact.name }}</div>
