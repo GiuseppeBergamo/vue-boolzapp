@@ -105,6 +105,16 @@ const boolzApp = new Vue({
             this.contacts[this.currentContact].messages.push(message);
 
             this.newMessage = '';
+
+            setTimeout(() => {
+                const message = {
+                    text: 'Ok',
+                    status: 'received',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss')
+                }
+
+                this.contacts[this.currentContact].messages.push(message);
+            }, 1000);
         }
     },
 });
