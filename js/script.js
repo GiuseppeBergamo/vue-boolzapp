@@ -3,6 +3,7 @@ console.log('VUE OK', Vue);
 const boolzApp = new Vue({
     el: '#root',
     data: {
+        newMessage: '',
         currentContact: 0,
         user: {
             name: 'Nome Utente',
@@ -94,5 +95,16 @@ const boolzApp = new Vue({
         goToContact(index) {
             this.currentContact = index
         },
+        sendMessage() {
+            const message = {
+                text: this.newMessage,
+                status: 'sent',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss')
+            };
+
+            this.contacts[this.currentContact].messages.push(message);
+
+            this.newMessage = '';
+        }
     },
 });
