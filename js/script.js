@@ -93,6 +93,6 @@ const boolzApp = new Vue({
     methods: {
         goToContact(index) {
             this.currentContact = index
-        }
+        },
     },
 });
