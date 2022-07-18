@@ -94,9 +94,8 @@ const boolzApp = new Vue({
     },
     computed: {
         filteredContacts() {
-            const contactNames = this.contacts.name;
-            return contactNames.filter(contact => {
-                return contact.title.match(this.searchContact);
+            return this.contacts.name.filter(contact => {
+                return contact.match(this.searchContact);
             });
         }
     },
