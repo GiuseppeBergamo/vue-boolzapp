@@ -3,6 +3,7 @@ console.log('VUE OK', Vue);
 const boolzApp = new Vue({
     el: '#root',
     data: {
+        searchContact: '',
         newMessage: '',
         currentContact: 0,
         user: {
@@ -90,6 +91,14 @@ const boolzApp = new Vue({
                 ],
             },
         ],
+    },
+    computed: {
+        filteredContacts() {
+            const contactNames = this.contacts.name;
+            return contactNames.filter(contact => {
+                return contact.title.match(this.searchContact);
+            });
+        }
     },
     methods: {
         goToContact(index) {
