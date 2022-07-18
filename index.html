@@ -29,9 +29,12 @@
         <div class="container">
             <div class="app-window">
                 <div class="row h-100">
+
                     <!--CONTACTS SIDEBAR-->
+
                     <section id="sidebar" class="col-4 p-0 d-flex flex-column">
                         <!--USER SECTION-->
+
                         <section id="user" class="bg-light d-flex justify-content-between">
                             <div class="w-75 flex-shrink-0 h-100 d-flex align-items-center">
                                 <img src="img/avatar_io.jpg" alt="" class="h-100 rounded-circle p-1">
@@ -44,7 +47,9 @@
                                 <i class="bi bi-three-dots-vertical"></i>
                             </div>
                         </section>
+
                         <!--NOTIFICATIONS-->
+
                         <section id="notifications" class="bg-blue h-10 flex-shrink-0">
                             <div class="d-flex align-items-center">
                                 <div class="h-100 p-2">
@@ -59,12 +64,16 @@
                                 </div>
                             </div>
                         </section>
+
                         <!--SEARCH BAR/SEARCH CONTACT-->
+
                         <section id="search-bar" class="bg-lightgrey p-2 flex-shrink-0">
                             <i class="bi bi-search text-secondary"></i>
                             <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100">
                         </section>
+
                         <!--CONTACTS/CONTACTS LIST-->
+
                         <section id="contacts" class="flex-grow-1 overflow-auto">
                             <ul class="m-0 p-0">
                                 <li v-for="(contact, index) in contacts" class="d-flex align-items-center"
@@ -77,9 +86,13 @@
                         </section>
 
                     </section>
+
                     <!--CHAT SECTION-->
+
                     <section id="chat" class="col-8 d-flex h-100 flex-column p-0">
+
                         <!--CHAT USER-->
+
                         <section id="chat-user" class="bg-light d-flex justify-content-between flex-shrink-0">
                             <div class="w-85 h-100 d-flex align-items-center">
                                 <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`" :alt="contacts[0].name"
@@ -92,7 +105,9 @@
                                 <i class="bi bi-three-dots-vertical"></i>
                             </div>
                         </section>
+
                         <!--CHAT BOX/CHAT CONTENT-->
+
                         <section id="chat-content" class="chat-bg-image overflow-auto flex-grow-1">
                             <ul class="p-3">
                                 <li v-for="message in contacts[currentContact].messages" class="d-flex p-2"
@@ -105,7 +120,9 @@
 
                             </ul>
                         </section>
+
                         <!--TYPE BAR-->
+
                         <section id="type-bar" class="h-10 flex-shrink-0 d-flex align-items-center p-2">
                             <div>
                                 <i class="bi bi-emoji-smile text-secondary p-2" style="font-size: 2rem;"></i>
