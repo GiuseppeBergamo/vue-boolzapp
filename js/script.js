@@ -3,6 +3,7 @@ console.log('VUE OK', Vue);
 const boolzApp = new Vue({
     el: '#root',
     data: {
+        currentContact: 0,
         user: {
             name: 'Nome Utente',
             avatar: '_io'
@@ -87,7 +88,11 @@ const boolzApp = new Vue({
                 }
                 ],
             },
-        ]
+        ],
     },
-
+    methods: {
+        goToIndex(index) {
+            this.currentIndex = index
+        }
+    },
 });

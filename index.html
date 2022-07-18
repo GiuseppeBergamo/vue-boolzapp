@@ -28,6 +28,7 @@
                 <div class="row h-100">
                     <!--CONTACTS SIDEBAR-->
                     <section id="sidebar" class="col-4 p-0 d-flex flex-column">
+                        <!--USER SECTION-->
                         <section id="user" class="bg-light d-flex justify-content-between">
                             <div class="w-75 flex-shrink-0 h-100 d-flex align-items-center">
                                 <img src="img/avatar_io.jpg" alt="" class="h-100 rounded-circle p-1">
@@ -40,7 +41,7 @@
                                 <i class="bi bi-three-dots-vertical"></i>
                             </div>
                         </section>
-
+                        <!--NOTIFICATIONS-->
                         <section id="notifications" class="bg-blue h-10 flex-shrink-0">
                             <div class="d-flex align-items-center">
                                 <div class="h-100 p-2">
@@ -55,10 +56,12 @@
                                 </div>
                             </div>
                         </section>
+                        <!--SEARCH BAR/SEARCH CONTACT-->
                         <section id="search-bar" class="bg-lightgrey p-2 flex-shrink-0">
                             <i class="bi bi-search text-secondary"></i>
                             <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100">
                         </section>
+                        <!--CONTACTS/CONTACTS LIST-->
                         <section id="contacts" class="flex-grow-1 overflow-auto">
                             <ul class="m-0 p-0">
                                 <li v-for="contact in contacts" class="d-flex align-items-center">
@@ -72,10 +75,12 @@
                     </section>
                     <!--CHAT SECTION-->
                     <section id="chat" class="col-8 d-flex h-100 flex-column p-0">
+                        <!--CHAT USER-->
                         <section id="chat-user" class="bg-light d-flex justify-content-between flex-shrink-0">
                             <div class="w-85 h-100 d-flex align-items-center">
-                                <img src="img/avatar_1.jpg" alt="Filippo Cruz" class="h-100 rounded-circle p-1">
-                                <div class="h-6 mb-0">Filippo Cruz</div>
+                                <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`" :alt="contacts[0].name"
+                                    class="h-100 rounded-circle p-1">
+                                <div class="h-6 mb-0">{{ contacts[currentContact].name }}</div>
                             </div>
                             <div class="w-15 d-flex justify-content-around align-items-center text-secondary">
                                 <i class="bi bi-search"></i>
@@ -83,27 +88,20 @@
                                 <i class="bi bi-three-dots-vertical"></i>
                             </div>
                         </section>
-
+                        <!--CHAT BOX/CHAT CONTENT-->
                         <section id="chat-content" class="chat-bg-image overflow-auto flex-grow-1">
                             <ul class="p-3">
-                                <li class="d-flex message-sent p-2">
+                                <li v-for="message in contacts[currentContact].messages" class="d-flex p-2"
+                                    :class="message.status">
                                     <div class="message-content p-2 rounded-2">
-                                        <p>Hai portato a spasso il cane?</p>
+                                        <p>{{ message.text }}</p>
+                                        <p class="text-secondary text-end"><small>{{ message.date }}</small></p>
                                     </div>
                                 </li>
-                                <li class="d-flex message-sent p-2">
-                                    <div class="message-content p-2 rounded-2">
-                                        <p>Ricordati di dargli da mangiare</p>
-                                    </div>
-                                </li>
-                                <li class="d-flex message-received p-2">
-                                    <div class="message-content p-2 rounded-2">
-                                        <p>Tutto fatto</p>
-                                    </div>
-                                </li>
+
                             </ul>
                         </section>
-
+                        <!--TYPE BAR-->
                         <section id="type-bar" class="h-10 flex-shrink-0 d-flex align-items-center p-2">
                             <div>
                                 <i class="bi bi-emoji-smile text-secondary p-2" style="font-size: 2rem;"></i>
