@@ -47,6 +47,11 @@ body {
 #contacts li {
     height: 70px;
     border-bottom: 2px solid lightgray;
+    cursor: pointer;
+}
+
+#contacts li:hover {
+    background-color: lightgray;
 }
 
 /* UTILS */

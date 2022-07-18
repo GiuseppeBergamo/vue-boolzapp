@@ -91,8 +91,8 @@ const boolzApp = new Vue({
         ],
     },
     methods: {
-        goToIndex(index) {
-            this.currentIndex = index
+        goToContact(index) {
+            this.currentContact = index
         }
     },
 });
